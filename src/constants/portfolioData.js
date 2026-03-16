@@ -195,6 +195,21 @@ export const portfolioData = {
       },
     ],
 
-    experiments: [],
+    experiments: [
+      {
+        title: "Portfolio Website",
+        description:
+          "A modern developer portfolio built with React.js featuring reusable components, centralized project data, responsive layouts, and animated UI sections.",
+        imgUrl: require("../assets/img/project-portfolio.png"),
+        tech: [
+          "React",
+          "React Bootstrap",
+          "CSS3",
+          "Animate.css",
+          "React Multi Carousel",
+        ],
+        webUrl: "#",
+      },
+    ],
   },
 };
