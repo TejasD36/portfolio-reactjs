@@ -526,39 +526,76 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 20px;
   overflow: hidden;
   padding-bottom: 20px;
-  transition: 0.3s ease;
+  transition: all 0.35s ease;
   position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #aa367c, #4a2fbd, #aa367c);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-image {
+  overflow: hidden;
 }
 
 .project-image img {
   width: 100%;
   height: 320px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
 }
 
 .project-content {
   padding: 18px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .project-content h4 {
   color: #fff;
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 6px;
 }
 
 .project-desc {
   color: #b8b8b8;
   font-size: 14px;
   margin: 8px 0 14px 0;
+  line-height: 1.6;
+  text-align: left;
+  width: 100%;
 }
 
 .project-tech {
   margin-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
 }
 
 .tech-tag {
@@ -573,20 +610,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
 .store-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
   padding: 6px 12px;
   background: #aa367c;
   color: white;
   border-radius: 6px;
   text-decoration: none;
+  transition: all 0.25s ease;
 }
 
 .store-btn:hover {
   background: #4a2fbd;
+  transform: translateY(-2px);
+}
+
+.web-btn {
+  background: #4a2fbd;
+}
+
+.web-btn:hover {
+  background: #aa367c;
 }
 
 .featured {
@@ -606,6 +657,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 4px 10px;
   border-radius: 6px;
   font-weight: 600;
+}
+
+.web-btn {
+  background: #4a2fbd;
+}
+
+.web-btn:hover {
+  background: #aa367c;
 }
 
 /************ Projects Css ************/

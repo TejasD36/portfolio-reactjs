@@ -1,4 +1,5 @@
 import { Col } from "react-bootstrap";
+import { GooglePlay, Apple, Globe } from "react-bootstrap-icons";
 
 export const ProjectCard = ({
   title,
@@ -7,6 +8,7 @@ export const ProjectCard = ({
   tech = [],
   playStore,
   appStore,
+  webUrl,
   featured,
 }) => {
   return (
@@ -39,7 +41,8 @@ export const ProjectCard = ({
                 rel="noopener noreferrer"
                 className="store-btn"
               >
-                Play Store
+                <GooglePlay size={16} />
+                <span>Play Store</span>
               </a>
             )}
 
@@ -50,7 +53,20 @@ export const ProjectCard = ({
                 rel="noopener noreferrer"
                 className="store-btn"
               >
-                App Store
+                <Apple size={16} />
+                <span>App Store</span>
+              </a>
+            )}
+
+            {webUrl && (
+              <a
+                href={webUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="store-btn web-btn"
+              >
+                <Globe size={16} />
+                <span>Web App</span>
               </a>
             )}
           </div>
