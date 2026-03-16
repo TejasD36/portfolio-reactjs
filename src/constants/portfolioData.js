@@ -1,6 +1,18 @@
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import hindaviImg from "../assets/img/project-ios-hindavi.png";
+import swipeloanImg from "../assets/img/project-swipeloan.png";
+import creatooImg from "../assets/img/project-ios-creatoo.png";
+import soyraImg from "../assets/img/project-ios-soyra.png";
+import griponImg from "../assets/img/project-gripon-bharat.png";
+import reliefImg from "../assets/img/project-relief-plus.png";
+import diabreviveImg from "../assets/img/project-diabrevive.png";
+import shivTravelImg from "../assets/img/project-shiv-travel.png";
+import smatonUserImg from "../assets/img/project-smaton.png";
+import smatonRestImg from "../assets/img/project-smaton-rest.png";
+import smatonDelImg from "../assets/img/project-smaton-del.png";
+import equineImg from "../assets/img/project-equine.png";
+import redRikshaImg from "../assets/img/project-red-riksha.png";
+import fmlImg from "../assets/img/project-fml.png";
+import portfolioImg from "../assets/img/project-portfolio.png";
 
 export const portfolioData = {
   banner: {
@@ -51,7 +63,7 @@ export const portfolioData = {
         title: "Hindavi Graphics",
         description:
           "Graphic design platform offering ready-to-use templates and powerful editing tools for creating social media posts, banners, and marketing creatives.",
-        imgUrl: require("../assets/img/project-ios-hindavi.png"),
+        imgUrl: hindaviImg,
         tech: ["Flutter", "MVVM", "Riverpod", "Freezed"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.bpointer.hindavigraphics",
@@ -63,7 +75,7 @@ export const portfolioData = {
         title: "SwipeLoan",
         description:
           "Digital loan facilitation platform connecting users with registered NBFCs for quick and seamless access to personal credit.",
-        imgUrl: require("../assets/img/project-swipeloan.png"),
+        imgUrl: swipeloanImg,
         tech: ["Flutter", "Provider", "Json Serializable"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.kgil.swipeloan",
@@ -74,7 +86,7 @@ export const portfolioData = {
         title: "Creatoo",
         description:
           "Loyalty and rewards platform that helps users unlock discounts, earn points, and stay connected with their favorite local brands.",
-        imgUrl: require("../assets/img/project-ios-creatoo.png"),
+        imgUrl: creatooImg,
         tech: ["Flutter", "PhonePe SDK", "Dartz"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.creatoo.app",
@@ -86,7 +98,7 @@ export const portfolioData = {
         title: "Soyra Maratha",
         description:
           "Community-focused matrimony platform helping individuals discover compatible life partners with verified profiles and secure matchmaking.",
-        imgUrl: require("../assets/img/project-ios-soyra.png"),
+        imgUrl: soyraImg,
         tech: ["Flutter", "Razorpay", "Firebase"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.bpointer.soyramaratha",
@@ -99,7 +111,7 @@ export const portfolioData = {
         title: "Gripon Bharat",
         description:
           "Dealer and employee management platform allowing dealers to place orders while enabling employees to manage deliveries and track daily work activity.",
-        imgUrl: require("../assets/img/project-gripon-bharat.png"),
+        imgUrl: griponImg,
         tech: ["Flutter", "SqfLite", "Workmanager"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.griponbharat.app",
@@ -109,7 +121,7 @@ export const portfolioData = {
         title: "Relief Plus",
         description:
           "Mental wellness platform developed by Mansik Shakti Foundation providing scientifically validated assessments for stress, anxiety, and psychiatric risk with ABHA integration.",
-        imgUrl: require("../assets/img/project-relief-plus.png"),
+        imgUrl: reliefImg,
         tech: ["Flutter", "CashFree PG", "MVVM"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.manshikshaktifoundation.reliefplus",
@@ -119,7 +131,7 @@ export const portfolioData = {
         title: "DiabRevive AI",
         description:
           "AI-powered wellness companion that helps users build healthier routines through daily progress tracking and personalized habit guidance.",
-        imgUrl: require("../assets/img/project-diabrevive.png"),
+        imgUrl: diabreviveImg,
         tech: ["Flutter", "Razorpay PG", "Riverpod"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.dailyroutine.app",
@@ -129,7 +141,7 @@ export const portfolioData = {
         title: "Shiv World Travel",
         description:
           "Travel booking platform allowing users to explore curated global travel experiences and seamlessly plan their journeys.",
-        imgUrl: require("../assets/img/project-shiv-travel.png"),
+        imgUrl: shivTravelImg,
         tech: ["Flutter", "WebView", "HTTP"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.shivworldtravel.app.shiv_world_travel",
@@ -139,7 +151,7 @@ export const portfolioData = {
         title: "SMATON User App",
         description:
           "Food delivery application allowing users to discover nearby restaurants, explore menus, and order meals for fast doorstep delivery.",
-        imgUrl: require("../assets/img/project-smaton.png"),
+        imgUrl: smatonUserImg,
         tech: ["Flutter", "Google Maps", "Firebase"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.smaton.fooddelivery.user",
@@ -149,7 +161,7 @@ export const portfolioData = {
         title: "SMATON Restaurant",
         description:
           "Restaurant partner application enabling restaurants to manage orders, track delivery status, and handle customer requests efficiently.",
-        imgUrl: require("../assets/img/project-smaton-rest.png"),
+        imgUrl: smatonRestImg,
         tech: ["Flutter", "Flutter Foreground Task", "Shared Preferences"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.smaton.fooddelivery.restaurant",
@@ -159,7 +171,7 @@ export const portfolioData = {
         title: "SMATON Delivery",
         description:
           "Delivery partner application helping drivers manage delivery tasks efficiently and ensure timely order fulfillment.",
-        imgUrl: require("../assets/img/project-smaton-del.png"),
+        imgUrl: smatonDelImg,
         tech: ["Flutter", "REST API", "Firebase"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.smaton.fooddelivery.delivery",
@@ -169,7 +181,7 @@ export const portfolioData = {
         title: "Equine LTS CozyCheck",
         description:
           "Environmental monitoring application using Bluetooth Low Energy sensors to track temperature and humidity for stables, trailers, and storage environments.",
-        imgUrl: require("../assets/img/project-equine.png"),
+        imgUrl: equineImg,
         tech: ["Flutter", "REST API", "Flutter Reactive BLE"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.equine.lts",
@@ -179,7 +191,7 @@ export const portfolioData = {
         title: "Red Riksha",
         description:
           "Local mobility platform designed for Pune’s fast-moving urban lifestyle with digital booking and payment integration.",
-        imgUrl: require("../assets/img/project-red-riksha.png"),
+        imgUrl: redRikshaImg,
         tech: ["Flutter", "GetX", "Razorpay"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.sync.red_riksha",
@@ -189,7 +201,7 @@ export const portfolioData = {
         title: "FML",
         description:
           "Unique time-based pub experience app allowing users to explore and interact with a new kind of social nightlife concept.",
-        imgUrl: require("../assets/img/project-fml.png"),
+        imgUrl: fmlImg,
         tech: ["Flutter", "Google Maps", "Firebase"],
         playStore: "https://play.google.com/store/apps/details?id=com.zonk.fml",
       },
@@ -200,7 +212,7 @@ export const portfolioData = {
         title: "Portfolio Website",
         description:
           "A modern developer portfolio built with React.js featuring reusable components, centralized project data, responsive layouts, and animated UI sections.",
-        imgUrl: require("../assets/img/project-portfolio.png"),
+        imgUrl: portfolioImg,
         tech: [
           "React",
           "React Bootstrap",
