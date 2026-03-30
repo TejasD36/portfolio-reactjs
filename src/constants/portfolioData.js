@@ -4,7 +4,7 @@ import creatooImg from "../assets/img/project-ios-creatoo.png";
 import soyraImg from "../assets/img/project-ios-soyra.png";
 import griponImg from "../assets/img/project-gripon-bharat.png";
 import reliefImg from "../assets/img/project-relief-plus.png";
-import diabreviveImg from "../assets/img/project-diabrevive.png";
+import diabreviveImg from "../assets/img/project-ios-diabreviveai.png";
 import shivTravelImg from "../assets/img/project-shiv-travel.png";
 import smatonUserImg from "../assets/img/project-smaton.png";
 import smatonRestImg from "../assets/img/project-smaton-rest.png";
@@ -135,6 +135,7 @@ export const portfolioData = {
         tech: ["Flutter", "Razorpay PG", "Riverpod"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.dailyroutine.app",
+        appStore: "https://apps.apple.com/in/app/diabrevive-ai/id6758514032",
       },
 
       {
