@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -6,7 +7,13 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-  const { mobileApps, experiments } = portfolioData.projects;
+  const { mobileApps, otherProjects } = portfolioData.projects;
+  const [showAllMobileApps, setShowAllMobileApps] = useState(false);
+  const visibleMobileApps = showAllMobileApps
+    ? mobileApps
+    : mobileApps.filter((project) => project.featured);
+  const featuredCount = mobileApps.filter((project) => project.featured).length;
+  const totalProjects = mobileApps.length + otherProjects.length;
 
   return (
     <section className="project" id="projects">
@@ -20,26 +27,48 @@ export const Projects = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>Projects</h2>
+                  <div className="project-heading">
+                    <span className="section-kicker">Selected Work</span>
+                    <h2>Projects Built For Real Users</h2>
 
-                  <p>
-                    Some of the mobile applications and projects I have worked
-                    on across different domains including fintech, healthcare,
-                    IoT integrations, and delivery platforms.
-                  </p>
+                    <p>
+                      A curated look at production mobile apps, developer tools,
+                      and web projects across fintech, healthcare, IoT,
+                      delivery, travel, and community platforms.
+                    </p>
+
+                    <div className="project-stats" aria-label="Project summary">
+                      <span>
+                        <strong>{totalProjects}</strong>
+                        Projects
+                      </span>
+                      <span>
+                        <strong>{mobileApps.length}</strong>
+                        Mobile apps
+                      </span>
+                      <span>
+                        <strong>{featuredCount}</strong>
+                        Featured
+                      </span>
+                    </div>
+                  </div>
 
                   <Tab.Container defaultActiveKey="mobile">
                     <Nav
                       variant="pills"
-                      className="nav-pills mb-5 justify-content-center"
+                      className="nav-pills project-tabs mb-5 justify-content-center"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="mobile">Mobile Apps</Nav.Link>
+                        <Nav.Link eventKey="mobile">
+                          <span>Mobile Apps</span>
+                          <strong>{mobileApps.length}</strong>
+                        </Nav.Link>
                       </Nav.Item>
 
                       <Nav.Item>
-                        <Nav.Link eventKey="experiments">
-                          Learning Projects
+                        <Nav.Link eventKey="otherProjects">
+                          <span>Other Projects</span>
+                          <strong>{otherProjects.length}</strong>
                         </Nav.Link>
                       </Nav.Item>
                     </Nav>
@@ -51,18 +80,41 @@ export const Projects = () => {
                     >
                       {/* Mobile Apps */}
                       <Tab.Pane eventKey="mobile">
-                        <Row>
-                          {mobileApps.map((project, index) => (
-                            <ProjectCard key={index} {...project} />
+                        <Row className="project-grid">
+                          {visibleMobileApps.map((project, index) => (
+                            <ProjectCard
+                              key={project.title}
+                              {...project}
+                              highlighted={project.featured && index === 0}
+                            />
                           ))}
                         </Row>
+                        <div className="projects-showcase-footer">
+                          <span>
+                            {showAllMobileApps
+                              ? "Showing the complete mobile app archive."
+                              : "Showing the strongest production highlights first."}
+                          </span>
+                          <button
+                            type="button"
+                            className="projects-toggle"
+                            onClick={() =>
+                              setShowAllMobileApps((current) => !current)
+                            }
+                            aria-expanded={showAllMobileApps}
+                          >
+                            {showAllMobileApps
+                              ? "Back to featured"
+                              : `View all ${mobileApps.length} mobile apps`}
+                          </button>
+                        </div>
                       </Tab.Pane>
 
-                      {/* Learning Projects */}
-                      <Tab.Pane eventKey="experiments">
-                        <Row>
-                          {experiments.map((project, index) => (
-                            <ProjectCard key={index} {...project} />
+                      {/* Other Projects */}
+                      <Tab.Pane eventKey="otherProjects">
+                        <Row className="project-grid">
+                          {otherProjects.map((project) => (
+                            <ProjectCard key={project.title} {...project} />
                           ))}
                         </Row>
                       </Tab.Pane>
@@ -78,7 +130,8 @@ export const Projects = () => {
       <img
         className="background-image-right"
         src={colorSharp2}
-        alt="background"
+        alt=""
+        aria-hidden="true"
       />
     </section>
   );

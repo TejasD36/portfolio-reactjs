@@ -13,6 +13,7 @@ import equineImg from "../assets/img/project-equine.png";
 import redRikshaImg from "../assets/img/project-red-riksha.png";
 import fmlImg from "../assets/img/project-fml.png";
 import portfolioImg from "../assets/img/project-portfolio.png";
+import flutterDevopsKitImg from "../assets/img/project-fkit.png";
 
 export const portfolioData = {
   banner: {
@@ -26,6 +27,11 @@ export const portfolioData = {
     ],
     description:
       "Mobile Application Developer specializing in Flutter with experience building scalable Android and iOS apps across fintech, healthcare, IoT, and delivery platforms.",
+    status: "Available for select mobile projects",
+    codeLines: [
+      "const focus = ['Flutter', 'Android', 'iOS'];",
+      "ship(focus, { quality: 'production' });",
+    ],
   },
 
   social: {
@@ -208,7 +214,7 @@ export const portfolioData = {
       },
     ],
 
-    experiments: [
+    otherProjects: [
       {
         title: "Portfolio Website",
         description:
@@ -221,7 +227,16 @@ export const portfolioData = {
           "Animate.css",
           "React Multi Carousel",
         ],
-        webUrl: "#",
+        githubUrl: "https://github.com/TejasD36/portfolio-reactjs",
+      },
+      {
+        title: "Flutter DevOps Kit",
+        description:
+          "A command-line toolkit for Flutter project setup, feature scaffolding, localization, flavors, builds, signing, and Firebase App Distribution.",
+        imgUrl: flutterDevopsKitImg,
+        tech: ["Dart", "Flutter", "CLI", "BLoC Clean Architecture"],
+        pubDevUrl: "https://pub.dev/packages/flutter_devops_kit",
+        githubUrl: "https://github.com/fkit-dev/flutter-devops-kit",
       },
     ],
   },

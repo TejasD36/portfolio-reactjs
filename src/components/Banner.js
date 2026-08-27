@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/header-img.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -13,39 +13,30 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const toRotate = portfolioData.banner.roles;
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta(100); // faster delete
-    } else {
-      setDelta(200); // normal typing
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(2000); // pause before deleting
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(500); // pause before next word
-    }
-  };
-
   useEffect(() => {
     const ticker = setTimeout(() => {
-      tick();
+      const i = loopNum % toRotate.length;
+      const fullText = toRotate[i];
+      const updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
+
+      setText(updatedText);
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setDelta(2000);
+      } else if (isDeleting && updatedText === "") {
+        setIsDeleting(false);
+        setLoopNum((current) => current + 1);
+        setDelta(500);
+      } else {
+        setDelta(isDeleting ? 100 : 200);
+      }
     }, delta);
 
     return () => clearTimeout(ticker);
-  }, [text]);
+  }, [delta, isDeleting, loopNum, text, toRotate]);
 
   return (
     <section className="banner" id="home">
@@ -59,6 +50,10 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
+                  <div className="hero-status">
+                    <span className="status-dot" aria-hidden="true" />
+                    {portfolioData.banner.status}
+                  </div>
                   <span className="tagline">
                     {portfolioData.banner.tagline}
                   </span>
@@ -66,13 +61,28 @@ export const Banner = () => {
                     {portfolioData.banner.title}{" "}
                     <span
                       className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate={JSON.stringify(portfolioData.banner.roles)}
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>{portfolioData.banner.description}</p>
+                  <div
+                    className="hero-code"
+                    role="group"
+                    aria-label="Development focus"
+                  >
+                    <div className="hero-code-bar">
+                      <span />
+                      <span />
+                      <span />
+                      <code>tejas.dev</code>
+                    </div>
+                    {portfolioData.banner.codeLines.map((line) => (
+                      <code className="hero-code-line" key={line}>
+                        {line}
+                      </code>
+                    ))}
+                  </div>
                   <button
                     onClick={() => {
                       const section = document.getElementById("connect");

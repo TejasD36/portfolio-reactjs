@@ -53,7 +53,11 @@ export const Skills = () => {
               >
                 {portfolioData.skills.skillsList.map((skill, index) => (
                   <div className="item" key={index}>
-                    <div className="skill-meter">
+                    <div
+                      className="skill-meter"
+                      role="img"
+                      aria-label={`${skill.name}: ${skill.level} percent proficiency`}
+                    >
                       <CircularProgressbar
                         value={skill.level}
                         text={`${skill.level}%`}
@@ -73,7 +77,7 @@ export const Skills = () => {
                         }}
                       />
                     </div>
-                    <h5>{skill.name}</h5>
+                    <h3>{skill.name}</h3>
                   </div>
                 ))}
               </Carousel>
@@ -84,7 +88,8 @@ export const Skills = () => {
       <img
         className="background-image-left"
         src={colorSharp}
-        alt="skills background"
+        alt=""
+        aria-hidden="true"
       />
     </section>
   );

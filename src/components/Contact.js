@@ -63,7 +63,7 @@ export const Contact = () => {
     <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center">
-          <Col size={12} md={6}>
+          <Col xs={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <img
@@ -72,12 +72,13 @@ export const Contact = () => {
                   }
                   src={contactImg}
                   alt="Contact illustration"
+                  loading="lazy"
                 />
               )}
             </TrackVisibility>
           </Col>
 
-          <Col size={12} md={6}>
+          <Col xs={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
@@ -89,9 +90,12 @@ export const Contact = () => {
 
                   <form onSubmit={handleSubmit}>
                     <Row>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col xs={12} sm={6} className="px-1">
+                        <label htmlFor="first-name">First Name</label>
                         <input
+                          id="first-name"
                           type="text"
+                          name="firstName"
                           value={formDetails.firstName}
                           placeholder="First Name"
                           onChange={(e) =>
@@ -101,9 +105,12 @@ export const Contact = () => {
                         />
                       </Col>
 
-                      <Col size={12} sm={6} className="px-1">
+                      <Col xs={12} sm={6} className="px-1">
+                        <label htmlFor="last-name">Last Name</label>
                         <input
+                          id="last-name"
                           type="text"
+                          name="lastName"
                           value={formDetails.lastName}
                           placeholder="Last Name"
                           onChange={(e) =>
@@ -113,9 +120,12 @@ export const Contact = () => {
                         />
                       </Col>
 
-                      <Col size={12} sm={6} className="px-1">
+                      <Col xs={12} sm={6} className="px-1">
+                        <label htmlFor="email">Email Address</label>
                         <input
+                          id="email"
                           type="email"
+                          name="email"
                           value={formDetails.email}
                           placeholder="Email Address"
                           onChange={(e) =>
@@ -125,9 +135,12 @@ export const Contact = () => {
                         />
                       </Col>
 
-                      <Col size={12} sm={6} className="px-1">
+                      <Col xs={12} sm={6} className="px-1">
+                        <label htmlFor="phone">Phone Number</label>
                         <input
+                          id="phone"
                           type="tel"
+                          name="phone"
                           value={formDetails.phone}
                           placeholder="Phone No."
                           onChange={(e) =>
@@ -136,8 +149,11 @@ export const Contact = () => {
                         />
                       </Col>
 
-                      <Col size={12} className="px-1">
+                      <Col xs={12} className="px-1">
+                        <label htmlFor="message">Message</label>
                         <textarea
+                          id="message"
+                          name="message"
                           rows="6"
                           value={formDetails.message}
                           placeholder="Message"
@@ -161,6 +177,8 @@ export const Contact = () => {
                             className={
                               status.success === false ? "danger" : "success"
                             }
+                            role="status"
+                            aria-live="polite"
                           >
                             {status.message}
                           </p>

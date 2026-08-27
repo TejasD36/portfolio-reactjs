@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/logo.svg";
+import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
-import { HashLink } from "react-router-hash-link";
-import { BrowserRouter as Router } from "react-router-dom";
 import { portfolioData } from "../constants/portfolioData";
 
 export const NavBar = () => {
@@ -31,11 +29,10 @@ export const NavBar = () => {
   };
 
   return (
-    <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Tejas Dudhal logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -52,15 +49,6 @@ export const NavBar = () => {
                 Home
               </Nav.Link>
               <Nav.Link
-                href="#skills"
-                className={
-                  activeLink === "skills" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("skills")}
-              >
-                Skills
-              </Nav.Link>
-              <Nav.Link
                 href="#projects"
                 className={
                   activeLink === "projects"
@@ -71,6 +59,15 @@ export const NavBar = () => {
               >
                 Projects
               </Nav.Link>
+              <Nav.Link
+                href="#skills"
+                className={
+                  activeLink === "skills" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("skills")}
+              >
+                Skills
+              </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -78,24 +75,27 @@ export const NavBar = () => {
                   href={portfolioData.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Open LinkedIn profile"
                 >
-                  <img src={navIcon1} alt="LinkedIn" />
+                  <img src={navIcon1} alt="" />
                 </a>
 
                 <a
                   href={portfolioData.social.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Open GitHub profile"
                 >
-                  <img src={navIcon2} alt="GitHub" />
+                  <img src={navIcon2} alt="" />
                 </a>
 
                 <a
                   href={portfolioData.social.email}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Email Tejas"
                 >
-                  <img src={navIcon3} alt="Email" />
+                  <img src={navIcon3} alt="" />
                 </a>
               </div>
 
@@ -103,19 +103,17 @@ export const NavBar = () => {
                 href={portfolioData.resume.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="resume-btn"
               >
-                <button className="resume-btn">Resume</button>
+                Resume
               </a>
 
-              <HashLink to="#connect">
-                <button className="vvd">
-                  <span>Let’s Connect</span>
-                </button>
-              </HashLink>
+              <a className="vvd" href="#connect">
+                <span>Let’s Connect</span>
+              </a>
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Router>
   );
 };
