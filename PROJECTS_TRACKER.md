@@ -45,6 +45,23 @@ Add future project candidates here before they are implemented in the portfolio.
 | Pending | Pune Water Helpline - Vendor  | Mobile Apps |  |
 | Pending | Pune Water Helpline - Delivery  | Mobile Apps |  |
 
+## Future Design Improvements
+
+Use this section as the design roadmap for the next portfolio polish pass.
+
+| Priority | Improvement | Notes |
+| --- | --- | --- |
+| High | Add project impact proof | Add outcomes and proof points to project cards, such as production launch, store availability, integrations, and role. |
+| High | Improve project modal layout | Structure detail popups into Overview, Role, Key Work, Tech Stack, and Links instead of a simple paragraph layout. |
+| High | Add project domain badges | Add scan-friendly labels like Fintech, Healthcare, IoT, Delivery, Travel, Community, Tools, and Web. |
+| Medium | Make Skills more senior | Consider replacing percentage circles with grouped capability cards for Mobile Development, Architecture, Integrations, and Tools. |
+| Medium | Add selected capabilities band | Add a compact section for Payments, BLE/IoT, Firebase, Maps, Store Publishing, and Clean Architecture. |
+| Medium | Strengthen hero proof | Add compact proof chips near the hero CTA, such as 14+ Apps, Play Store + App Store, Flutter, IoT/BLE, and Payments. |
+| Medium | Refine section separation | Improve visual rhythm between Projects, Skills, and Contact with more distinct spacing, depth, or subtle dividers. |
+| Medium | Improve Contact closing CTA | Make Contact feel like a premium final CTA for Flutter/mobile app work, with tighter copy and a lighter visual layout. |
+| Low | Refine navbar active state | Consider a smoother active indicator or underline that matches the section order. |
+| Low | Reduce repeated gradient usage | Keep purple/blue gradients mostly for CTAs, active states, and key accents for a more controlled visual system. |
+
 ## Review Checklist
 
 - Every `Added` project in this file exists in `src/constants/portfolioData.js`.
