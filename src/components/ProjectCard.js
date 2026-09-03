@@ -6,6 +6,7 @@ import {
   Github,
   Globe,
   GooglePlay,
+  Lock,
 } from "react-bootstrap-icons";
 
 export const ProjectCard = ({
@@ -20,6 +21,7 @@ export const ProjectCard = ({
   pubDevUrl,
   featured,
   highlighted,
+  internal,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -27,6 +29,9 @@ export const ProjectCard = ({
   const closeDetails = () => setShowDetails(false);
   const visibleTech = tech.slice(0, 3);
   const hiddenTechCount = Math.max(tech.length - visibleTech.length, 0);
+  const hasExternalLinks = Boolean(
+    playStore || appStore || webUrl || pubDevUrl || githubUrl
+  );
 
   const projectLinks = (compact = false) => (
     <div className={compact ? "project-platforms" : "project-links"}>
@@ -98,6 +103,20 @@ export const ProjectCard = ({
           <Github size={compact ? 18 : 16} />
           {!compact && <span>GitHub</span>}
         </a>
+      )}
+
+      {internal && !hasExternalLinks && (
+        <span
+          className={
+            compact
+              ? "internal-badge internal-badge-compact"
+              : "internal-badge"
+          }
+          title="Private project"
+        >
+          <Lock size={compact ? 14 : 15} aria-hidden="true" />
+          <span>{compact ? "Private" : "Private project"}</span>
+        </span>
       )}
     </div>
   );

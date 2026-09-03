@@ -9,24 +9,31 @@ Use this file as the checklist for portfolio project coverage. When adding a pro
 
 ## Included Projects
 
-| Status | Project | Category | Store / Source |
-| --- | --- | --- | --- |
-| Added | Hindavi Graphics | Mobile Apps | Play Store, App Store |
-| Added | SwipeLoan | Mobile Apps | Play Store |
-| Added | Creatoo | Mobile Apps | Play Store, App Store |
-| Added | Soyra Maratha | Mobile Apps | Play Store, App Store, Web |
-| Added | Gripon Bharat | Mobile Apps | Play Store |
-| Added | Relief Plus | Mobile Apps | Play Store |
-| Added | DiabRevive AI | Mobile Apps | Play Store, App Store |
-| Added | Shiv World Travel | Mobile Apps | Play Store |
-| Added | SMATON User App | Mobile Apps | Play Store |
-| Added | SMATON Restaurant | Mobile Apps | Play Store |
-| Added | SMATON Delivery | Mobile Apps | Play Store |
-| Added | Equine LTS CozyCheck | Mobile Apps | Play Store |
-| Added | Red Riksha | Mobile Apps | Play Store |
-| Added | FML | Mobile Apps | Play Store |
-| Added | Portfolio Website | Other Projects | GitHub |
-| Added | Flutter DevOps Kit | Other Projects | pub.dev, GitHub |
+| Status | Project | Category | Featured | Store / Source |
+| --- | --- | --- | --- | --- |
+| Added | Hindavi Graphics | Mobile Apps | Yes | Play Store, App Store |
+| Added | SwipeLoan | Mobile Apps | Yes | Play Store |
+| Added | Creatoo | Mobile Apps | Yes | Play Store, App Store |
+| Added | Soyra Maratha | Mobile Apps | Yes | Play Store, App Store, Web |
+| Added | Pune Water Helpline - Customer | Mobile Apps | No | Play Store |
+| Added | Pune Water Helpline - Vendor | Mobile Apps | No | — |
+| Added | Pune Water Helpline - Delivery | Mobile Apps | No | — |
+| Added | Gripon Bharat | Mobile Apps | Yes | Play Store, App Store |
+| Added | Relief Plus | Mobile Apps | No | Play Store |
+| Added | DiabRevive AI | Mobile Apps | No | Play Store, App Store |
+| Added | SMATON User App | Mobile Apps | No | Play Store |
+| Added | SMATON Restaurant | Mobile Apps | No | Play Store |
+| Added | SMATON Delivery | Mobile Apps | No | Play Store |
+| Added | Equine LTS CozyCheck | Mobile Apps | Yes | Play Store |
+| Added | E-Prashikshan | Mobile Apps | No | Play Store |
+| Added | ScoreLoan | Mobile Apps | Yes | Play Store, Website; App Store pending |
+| Added | HG Smart Connect | Mobile Apps | No | Internal Android app |
+| Added | Artist Wall | Mobile Apps | No | Play Store |
+| Added | FML | Mobile Apps | No | Play Store |
+| Added | Portfolio Website | Other Projects | No | GitHub |
+| Added | Flutter DevOps Kit | Other Projects | No | pub.dev, GitHub |
+| Commented | Shiv World Travel | Mobile Apps | No | Play Store |
+| Commented | Red Riksha | Mobile Apps | No | Play Store |
 
 ## Pending / Yet To Add
 
@@ -34,16 +41,10 @@ Add future project candidates here before they are implemented in the portfolio.
 
 | Status | Project | Target Category | Notes / Links |
 | --- | --- | --- | --- |
-| Pending | E-Prashikshan  | Mobile Apps | Play Store |
-| Pending | ScoreLoan  | Mobile Apps | Play Store, App Store, Website |
-| Pending | HG Smart Connect  | Mobile Apps |  |
-| Pending | Matka King  | Mobile Apps |  |
-| Pending | Prime Hub  | Mobile Apps |  |
-| Pending | Riya777  | Mobile Apps |  |
-| Pending | MyMatka  | Mobile Apps |  |
-| Pending | Pune Water Helpline - Customer  | Mobile Apps |  |
-| Pending | Pune Water Helpline - Vendor  | Mobile Apps |  |
-| Pending | Pune Water Helpline - Delivery  | Mobile Apps |  |
+| Skipped | Matka King  | Mobile Apps |  |
+| Skipped | Prime Hub  | Mobile Apps |  |
+| Skipped | Riya777  | Mobile Apps |  |
+| Skipped | MyMatka  | Mobile Apps |  |
 
 ## Future Design Improvements
 
@@ -64,7 +65,9 @@ Use this section as the design roadmap for the next portfolio polish pass.
 
 ## Review Checklist
 
-- Every `Added` project in this file exists in `src/constants/portfolioData.js`.
+- Every project in the Included Projects table exists in `src/constants/portfolioData.js`.
 - Every project in `src/constants/portfolioData.js` is listed in this file.
 - Mobile apps belong under `mobileApps`.
 - Websites, packages, tools, and non-mobile work belong under `otherProjects`.
+- Featured values match the `featured` flag in `src/constants/portfolioData.js`.
+- Internal projects are clearly identified and do not expose unavailable store links.

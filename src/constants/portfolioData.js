@@ -1,19 +1,26 @@
-import hindaviImg from "../assets/img/project-ios-hindavi.png";
+import hindaviImg from "../assets/img/project-hindavi.png";
 import swipeloanImg from "../assets/img/project-swipeloan.png";
-import creatooImg from "../assets/img/project-ios-creatoo.png";
-import soyraImg from "../assets/img/project-ios-soyra.png";
+import creatooImg from "../assets/img/project-creatoo.png";
+import soyraImg from "../assets/img/project-soyra.png";
 import griponImg from "../assets/img/project-gripon-bharat.png";
 import reliefImg from "../assets/img/project-relief-plus.png";
-import diabreviveImg from "../assets/img/project-ios-diabreviveai.png";
-import shivTravelImg from "../assets/img/project-shiv-travel.png";
+import diabreviveImg from "../assets/img/project-diabrevive.png";
 import smatonUserImg from "../assets/img/project-smaton.png";
 import smatonRestImg from "../assets/img/project-smaton-rest.png";
 import smatonDelImg from "../assets/img/project-smaton-del.png";
 import equineImg from "../assets/img/project-equine.png";
-import redRikshaImg from "../assets/img/project-red-riksha.png";
 import fmlImg from "../assets/img/project-fml.png";
 import portfolioImg from "../assets/img/project-portfolio.png";
 import flutterDevopsKitImg from "../assets/img/project-fkit.png";
+import ePrashikshanImg from "../assets/img/project-e-prashikshan.png";
+import scoreLoanImg from "../assets/img/project-scoreloan.png";
+import artistWallImg from "../assets/img/project-artist-wall.png";
+import pwhImg from "../assets/img/project-pwh.png";
+import pwhVendorImg from "../assets/img/project-pwh-vendor.png";
+import pwhDeliveryImg from "../assets/img/project-pwh-delivery.png";
+import hgSmartConnectImg from "../assets/img/project-hg-smart-connect.png";
+// import shivTravelImg from "../assets/img/project-shiv-travel.png";
+// import redRikshaImg from "../assets/img/project-red-riksha.png";
 
 export const portfolioData = {
   banner: {
@@ -82,10 +89,9 @@ export const portfolioData = {
         description:
           "Digital loan facilitation platform connecting users with registered NBFCs for quick and seamless access to personal credit.",
         imgUrl: swipeloanImg,
-        tech: ["Flutter", "Provider", "Json Serializable"],
+        tech: ["Flutter", "Provider", "MVVM", "Facade Pattern"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.kgil.swipeloan",
-        featured: true,
       },
 
       {
@@ -114,6 +120,36 @@ export const portfolioData = {
       },
 
       {
+        title: "ScoreLoan",
+        description:
+          "Digital financial services platform enabling users to discover, compare, and apply for loans, credit cards, and insurance products through a secure and paperless experience.",
+        imgUrl: scoreLoanImg,
+        tech: [
+          "Flutter",
+          "Riverpod",
+          "Clean Architecture",
+          "PDF Generation",
+          "Easebuzz PG",
+        ],
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.capora.scoreloan&pcampaignid=web_share",
+        webUrl: "https://scoreloan.app/login",
+        featured: true,
+      },
+
+      {
+        title: "Equine LTS CozyCheck",
+        description:
+          "Environmental monitoring application using Bluetooth Low Energy sensors to track temperature and humidity for stables, trailers, and storage environments.",
+        imgUrl: equineImg,
+        tech: ["Flutter", "REST API", "Flutter Reactive BLE, Localization"],
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.equine.lts",
+        appStore: "https://apps.apple.com/in/app/equine-lts/id6756025739",
+        featured: true,
+      },
+
+      {
         title: "Gripon Bharat",
         description:
           "Dealer and employee management platform allowing dealers to place orders while enabling employees to manage deliveries and track daily work activity.",
@@ -121,6 +157,51 @@ export const portfolioData = {
         tech: ["Flutter", "SqfLite", "Workmanager"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.griponbharat.app",
+        appStore: "https://apps.apple.com/in/app/gripon-bharat/id6761461916",
+        featured: true,
+      },
+      {
+        title: "Pune Water Helpline - Customer",
+        description:
+          "Location-based water service platform enabling customers to book water-related services, manage requests, make payments, and track deliveries in real time across Pune.",
+        imgUrl: pwhImg,
+        tech: [
+          "Flutter",
+          "BLoC",
+          "Clean Architecture",
+          "Google Maps API",
+          "Razorpay PG",
+        ],
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.pwh.customer.app&pcampaignid=web_share",
+        appStore:
+          "https://apps.apple.com/in/app/pune-water-helpline/id6756025739",
+      },
+      {
+        title: "Pune Water Helpline - Vendor",
+        description:
+          "Vendor operations platform for managing water-service bookings, preparing orders, updating fulfillment status, and coordinating customer deliveries across Pune.",
+        imgUrl: pwhVendorImg,
+        tech: [
+          "Flutter",
+          "BLoC",
+          "Clean Architecture",
+          "Google Maps API",
+          "Razorpay PG",
+        ],
+      },
+      {
+        title: "Pune Water Helpline - Delivery",
+        description:
+          "Delivery partner application helping water-service drivers manage assigned bookings, navigate to customers, update delivery progress, and complete fulfillment in real time.",
+        imgUrl: pwhDeliveryImg,
+        tech: [
+          "Flutter",
+          "BLoC",
+          "Clean Architecture",
+          "Google Maps API",
+          "Razorpay PG",
+        ],
       },
 
       {
@@ -138,20 +219,10 @@ export const portfolioData = {
         description:
           "AI-powered wellness companion that helps users build healthier routines through daily progress tracking and personalized habit guidance.",
         imgUrl: diabreviveImg,
-        tech: ["Flutter", "Razorpay PG", "Riverpod"],
+        tech: ["Flutter", "Razorpay PG", "Riverpod", "MVVM"],
         playStore:
           "https://play.google.com/store/apps/details?id=com.dailyroutine.app",
         appStore: "https://apps.apple.com/in/app/diabrevive-ai/id6758514032",
-      },
-
-      {
-        title: "Shiv World Travel",
-        description:
-          "Travel booking platform allowing users to explore curated global travel experiences and seamlessly plan their journeys.",
-        imgUrl: shivTravelImg,
-        tech: ["Flutter", "WebView", "HTTP"],
-        playStore:
-          "https://play.google.com/store/apps/details?id=com.shivworldtravel.app.shiv_world_travel",
       },
 
       {
@@ -185,23 +256,43 @@ export const portfolioData = {
       },
 
       {
-        title: "Equine LTS CozyCheck",
+        title: "E-Prashikshan",
         description:
-          "Environmental monitoring application using Bluetooth Low Energy sensors to track temperature and humidity for stables, trailers, and storage environments.",
-        imgUrl: equineImg,
-        tech: ["Flutter", "REST API", "Flutter Reactive BLE"],
+          "Digital learning and advisory platform helping users understand Maharashtra Government service rules, departmental inquiry procedures, and official topics through an AI-powered Marathi knowledge assistant.",
+        imgUrl: ePrashikshanImg,
+        tech: [
+          "Flutter",
+          "BLoC",
+          "Clean Architecture",
+          "Gemini AI",
+          "File Search",
+        ],
         playStore:
-          "https://play.google.com/store/apps/details?id=com.equine.lts",
+          "https://play.google.com/store/apps/details?id=com.eprashikshan.vibhagiyachaukashi&pcampaignid=web_share",
       },
 
       {
-        title: "Red Riksha",
+        title: "HG Smart Connect",
         description:
-          "Local mobility platform designed for Pune’s fast-moving urban lifestyle with digital booking and payment integration.",
-        imgUrl: redRikshaImg,
-        tech: ["Flutter", "GetX", "Razorpay"],
+          "Internal Android support application connecting a web admin panel with a support agent's phone, using Firebase real-time synchronization to initiate calls, detect call events, and remotely coordinate call actions.",
+        imgUrl: hgSmartConnectImg,
+        tech: [
+          "Kotlin",
+          "Firebase Realtime DB",
+          "Android Telephony",
+          "Real-time Sync",
+        ],
+        internal: true,
+      },
+      {
+        title: "Artist Wall",
+        description:
+          "Professional entertainment and casting platform enabling artists and creative professionals to build portfolios, discover opportunities, apply for roles, and connect with industry professionals.",
+        imgUrl: artistWallImg,
+        tech: ["Flutter", "Provider", "MVVM", "Razorpay PG"],
         playStore:
-          "https://play.google.com/store/apps/details?id=com.sync.red_riksha",
+          "https://play.google.com/store/apps/details?id=com.artistwall.app&pcampaignid=web_share",
+        appStore: "https://apps.apple.com/in/app/artist-wall/id6756025739",
       },
 
       {
@@ -211,7 +302,30 @@ export const portfolioData = {
         imgUrl: fmlImg,
         tech: ["Flutter", "Google Maps", "Firebase"],
         playStore: "https://play.google.com/store/apps/details?id=com.zonk.fml",
+        webUrl: "https://foodmusiclove.in",
       },
+
+      ///Not showing these apps in portfolio for now, as they are not worth mentioning. Can be added later if needed.
+      /* 
+      {
+        title: "Shiv World Travel",
+        description:
+          "Travel booking platform allowing users to explore curated global travel experiences and seamlessly plan their journeys.",
+        imgUrl: shivTravelImg,
+        tech: ["Flutter", "WebView", "HTTP"],
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.shivworldtravel.app.shiv_world_travel",
+      },
+      {
+        title: "Red Riksha",
+        description:
+          "Local mobility platform designed for Pune’s fast-moving urban lifestyle with digital booking and payment integration.",
+        imgUrl: redRikshaImg,
+        tech: ["Flutter", "GetX", "Razorpay"],
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.sync.red_riksha",
+       },
+       */
     ],
 
     otherProjects: [
