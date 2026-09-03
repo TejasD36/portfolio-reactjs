@@ -9,10 +9,15 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const { mobileApps, otherProjects } = portfolioData.projects;
   const [showAllMobileApps, setShowAllMobileApps] = useState(false);
+  const featuredMobileApps = mobileApps.filter((project) => project.featured);
+  const orderedMobileApps = [
+    ...featuredMobileApps,
+    ...mobileApps.filter((project) => !project.featured),
+  ];
   const visibleMobileApps = showAllMobileApps
-    ? mobileApps
-    : mobileApps.filter((project) => project.featured);
-  const featuredCount = mobileApps.filter((project) => project.featured).length;
+    ? orderedMobileApps
+    : featuredMobileApps;
+  const featuredCount = featuredMobileApps.length;
   const totalProjects = mobileApps.length + otherProjects.length;
 
   return (
