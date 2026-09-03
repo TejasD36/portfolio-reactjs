@@ -787,10 +787,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-image img {
-  width: min(86%, 260px);
-  height: min(86%, 190px);
-  max-width: 260px;
-  max-height: 190px;
+  width: 100%;
+  height: 100%;
   display: block;
   object-fit: contain;
   transition: transform 0.4s ease;
@@ -867,6 +865,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #121212;
   background: #fff;
   border-color: #fff;
+}
+
+.internal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 6px 11px;
+  border: 1px solid rgba(238, 198, 255, 0.35);
+  border-radius: 999px;
+  color: #f0d8ff;
+  background: rgba(170, 54, 124, 0.16);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.internal-badge-compact {
+  min-height: 34px;
+  padding-inline: 10px;
+  font-size: 12px;
 }
 
 .project-desc {
@@ -1008,7 +1028,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-modal-dialog {
-  --bs-modal-width: min(760px, calc(100vw - 32px));
+  --bs-modal-width: min(720px, calc(100vw - 32px));
   margin-top: 92px;
   margin-bottom: 28px;
 }
